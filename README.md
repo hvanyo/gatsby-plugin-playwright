@@ -38,7 +38,7 @@ plugins: [
       port: 9000,
       screenshotsDir: './screenshots',
       browsers: ['chromium', 'firefox', 'webkit'],
-      viewports: [600, 640, 768, 1024, 1280, 1536, 1920],
+      viewportwidths: [600, 640, 768, 1024, 1280, 1536, 1920],
       context: {},
       query: `
         {
