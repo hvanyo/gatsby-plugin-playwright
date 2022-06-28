@@ -31,7 +31,7 @@ exports.onPostBuild = async ({ graphql }, pluginOptions) => {
   }
 
   const {
-    port, screenshotsDir, browsers, query, serialize, viewports, context
+    port, screenshotsDir, browsers, query, serialize, viewportwidths, context
   } = {
     ...defaultOptions,
     ...pluginOptions
