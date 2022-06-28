@@ -4,9 +4,10 @@ Uses [Playwright](https://github.com/microsoft/playwright) to generate screensho
 
 _NOTE: This plugin only generates output with `gatsby build`_
 
+Snapshots are taken full page.
 ## Install
 
-`yarn add -D gatsby-plugin-playwright`
+`npm install gatsby-plugin-playwright --save-dev`
 
 ## Usage
 
@@ -14,6 +15,7 @@ _NOTE: This plugin only generates output with `gatsby build`_
 plugins: ['gatsby-plugin-playwright']
 ```
 
+If you do not want this to run then set environment variable: SKIP_SNAPSHOT=1
 ## Options
 The options are as follows:
 
@@ -21,6 +23,7 @@ The options are as follows:
 - `screenshotsDir` (string) The screenshots directory path. Defaults to `./screenshots`.
 - `browsers` (array of strings) An array of browsers for playwright to screenshot. Defaults to `['chromium', 'firefox', 'webkit']`
 - `context` ([BrowserContext](https://github.com/microsoft/playwright/blob/master/docs/api.md#class-browsercontext)) Defaults to `{}`
+-  `viewportwidths` (array of intergers)  An array of widths to set viewport width
 - `query` (GraphQL Query) The query for the data you need to generate the screenshots. If you change the query you also need to change the serialize function to properly format the data. 
 - `serialize` (function) Takes the output of the data query and has to return an array with strings that reflects the page path. 
 
@@ -35,6 +38,7 @@ plugins: [
       port: 9000,
       screenshotsDir: './screenshots',
       browsers: ['chromium', 'firefox', 'webkit'],
+      viewports: [600, 640, 768, 1024, 1280, 1536, 1920],
       context: {},
       query: `
         {

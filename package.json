@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-playwright",
   "description": "Uses Playwright to generate screenshots in Chromium, Firefox and WebKit.",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "main": "index.js",
   "author": "Dylan Blokhuis <dylanblokhuis3@hotmail.com>",
   "bugs": {
@@ -11,15 +11,15 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "playwright": "^1.0.1",
+    "@playwright/test": "^1.23.0",
     "serve-handler": "^6.1.2"
   },
   "peerDependencies": {
-    "gatsby": "^2.0.0"
+    "gatsby": "^4.11.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dylanblokhuis/gatsby-plugin-playwright"
+    "url": "https://github.com/hvanyo/gatsby-plugin-playwright"
   },
   "keywords": [
     "gatsby",
@@ -27,6 +27,6 @@
     "playwright"
   ],
   "engines": {
-    "node": ">=10.15.0"
+    "node": ">=16.9"
   }
 }
